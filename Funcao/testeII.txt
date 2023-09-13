@@ -1,0 +1,5 @@
+RA: 201282 Nome: Matheus Figueiredo Curso: PD
+RA: 201286 Nome: Raphael Parra Curso: PD
+RA: 201212 Nome: Ingrid Moreira Curso: GEO
+RA: 201125 Nome: Thaísa Daher Curso: CCD
+RA: 201625 Nome: Roberta Ratzke Curso: ENF
