@@ -3,10 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minas Tênis Clube</title>
-
     <style>
         body {
             font-family: Calibri, sans-serif;
@@ -14,24 +12,13 @@
             margin-left: 5px;
         }
 
+        a {
+            margin-bottom: 15px;
+        }
+
         h2 {
             text-align: center;
             margin-top: 7px;
-        }
-
-        input {
-            box-sizing: border-box;
-            width: 100%;
-            padding: 10px;
-            border: 2px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
-
-        input[type="button"]:hover {
-            background-color: #696865;
-            color: white;
         }
 
         img {
@@ -41,6 +28,11 @@
             margin: 0 auto;
         }
 
+        span {
+            justify-content: center;
+            display: flex;
+        }
+
         .container {
             max-width: 40%;
             max-height: 45%;
@@ -48,21 +40,31 @@
             margin: auto;
             padding: 20px;
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-            margin-top: 30px;
             margin-bottom: -10px;
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <form>
-            <img src="img/minasLogo.png">
-            <h2>Minas Tênis Clube</h2>
-            <input type="button" value="Cadastrar" onclick="window.open('cadastra.php', '_top');"><br><br>
-            <input type="button" value="Consultar" onclick="window.open('consulta.php', '_top');"><br><br>
-        </form>
-    </div>
+    <a href="index.html">Home </a>|
+    <a href="consulta.php">Consulta</a>
+    <hr>
 </body>
 
 </html>
+
+<?php
+
+include("funcoes.php");
+
+$cod = $_POST["cod"];
+$novoNome = $_POST["nome"];
+$novaPosicao = $_POST["posicao"];
+$novaFoto = isset($_FILES['foto']);
+
+echo "<div class='container'>
+<img src='img/minasLogo.png'>
+<h2>Edição de Jogadoras</h2>";
+altera($cod, $novoNome, $novaPosicao, $novaFoto);
+
+?>
