@@ -78,7 +78,6 @@ function buscaEdicao($cod)
 function altera($cod, $novoNome, $novaPosicao, $novaFoto)
 {
     $pdo = conectarBD();
-    $novaFoto = isset($_FILES['foto']);
     $nomeFoto = isset($novaFoto['name']);
     $tipoFoto = isset($novaFoto['type']);
     $tamanhoFoto = isset($novaFoto['size']);

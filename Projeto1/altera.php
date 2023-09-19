@@ -60,7 +60,7 @@ include("funcoes.php");
 $cod = $_POST["cod"];
 $novoNome = $_POST["nome"];
 $novaPosicao = $_POST["posicao"];
-$novaFoto = isset($_FILES['foto']);
+$novaFoto = $_FILES['foto'];
 
 echo "<div class='container'>
 <img src='img/minasLogo.png'>
