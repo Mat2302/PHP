@@ -201,9 +201,9 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
     if ((trim($cod) == "") || (trim($nome) == "") || (trim($posicao) == "")) {
         echo "<div class='container2'><span id='warning'>Os campos são obrigatórios!</span></div>";
     } else if (($nomeFoto != "") && (!preg_match('/^image\/(jpeg|png|gif)$/', $tipoFoto))) {
-        echo "<div class='container2><span id='error'>Não é uma imagem válida!</span></div>";
+        echo "<div class='container2'><span id='error'>Não é uma imagem válida!</span></div>";
     } else if ($tamanhoFoto > TAMANHO_MAXIMO) {
-        echo "<div class='container2><span id='error'>A imagem deve possuir no máximo 2MB!</span></div>";
+        echo "<div class='container2'><span id='error'>A imagem deve possuir no máximo 2MB!</span></div>";
     } else {
         cadastra($cod, $nome, $posicao, $foto);
     }

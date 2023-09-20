@@ -82,6 +82,9 @@ function altera($cod, $novoNome, $novaPosicao, $novaFoto)
     $tipoFoto = ($novaFoto['type']);
     $tamanhoFoto = ($novaFoto['size']);
     $pdo = conectarBD();
+    $nomeFoto = isset($novaFoto['name']);
+    $tipoFoto = isset($novaFoto['type']);
+    $tamanhoFoto = isset($novaFoto['size']);
     if ($nomeFoto != "") {
         $fotoBinario = file_get_contents($novaFoto['tmp_name']);
         $stmt = $pdo->prepare("UPDATE minas SET nome = :novoNome, posicao = :novaPosicao, foto = :novaFoto WHERE cod = :cod");

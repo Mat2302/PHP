@@ -143,7 +143,7 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
             if ($row['foto'] == null) {
                 echo "<td align='center'><img src='img/user.png' width='50px' height='50px'></td>";
             } else {
-                echo "<td align='center'><img src='data:image;base64," . base64_encode($row['foto']) . "' width='50px' height='50px'></td>";
+                echo "<td align='center'><img src='data:image;base64," . base64_encode($row['foto']) . "' name='foto' width='50px' height='50px'></td>";
             }
             echo "</tr>";
             echo "</tr>";
