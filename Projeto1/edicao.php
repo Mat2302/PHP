@@ -128,9 +128,9 @@ if (!isset($_POST["cod"])) {
             echo "<div class='container'>\n
             <img src='img/minasLogo.png'>\n
             <h2>Edição de Jogadoras</h2>\n
-            <form method='post' action='altera.php'>\n
+            <form method='post' enctype='multipart/form-data' action='altera.php'>\n
             <input type='text' name='cod' value='$row[cod]' placeholder='Código'
-                readonly oninput='this.value = this.value.replace(/[^0-9]/g, '');'><br><br>\n
+                readonly><br><br>\n
 
             <input type='text' size='25' name='nome' value='$row[nome]' placeholder='Nome'><br><br>\n
             

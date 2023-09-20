@@ -77,11 +77,11 @@ function buscaEdicao($cod)
 
 function altera($cod, $novoNome, $novaPosicao, $novaFoto)
 {
+    $novaFoto = ($_FILES['foto']);
+    $nomeFoto = ($novaFoto['name']);
+    $tipoFoto = ($novaFoto['type']);
+    $tamanhoFoto = ($novaFoto['size']);
     $pdo = conectarBD();
-    $novaFoto = isset($_FILES['foto']);
-    $nomeFoto = isset($novaFoto['name']);
-    $tipoFoto = isset($novaFoto['type']);
-    $tamanhoFoto = isset($novaFoto['size']);
     if ($nomeFoto != "") {
         $fotoBinario = file_get_contents($novaFoto['tmp_name']);
         $stmt = $pdo->prepare("UPDATE minas SET nome = :novoNome, posicao = :novaPosicao, foto = :novaFoto WHERE cod = :cod");
