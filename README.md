@@ -1,1 +1,4 @@
-Repositório criado para estudo e armazenamento de pequenos exemplos de projetos PHP feitos em aula.
+# PHP
+## Sobre o Repositório
+
+Repositório criado para armazenamento de projetos e tarefas feitas durante aula, todas voltadas para treinamento e estudo da linguagem.
